@@ -362,3 +362,216 @@ button {
     display: none;
   }
 }
+
+/* Hero */
+
+.hero {
+  background-color: #2e2f42;
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url("../images/hero-mobile1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+@media screen and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url("../images/hero-mobile2x.jpg");
+  }
+}
+
+.hero-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: #fff;
+  max-height: 160px;
+  justify-content: center;
+  align-items: center;
+  margin: 72px 37px;
+}
+
+.hero-btn {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #fff;
+  background-color: #4d5ae5;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 16px 32px;
+  margin-bottom: 72px;
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url("../images/hero-tablet1x.jpg");
+  }
+  .hero-title {
+    font-size: 56px;
+    line-height: 1.07;
+    max-height: 120px;
+    max-width: 496px;
+    margin-top: 112px;
+    margin-bottom: 36px;
+  }
+
+  .hero-btn {
+    margin-bottom: 112px;
+  }
+}
+@media screen and (min-resolution: 2dppx) and (min-width: 768px) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url("../images/hero-tablet2x.jpg");
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url("../images/hero-norm1x.jpg");
+  }
+
+  .hero-title {
+    margin-top: 188px;
+    margin-bottom: 48px;
+  }
+  .hero-btn {
+    margin-bottom: 188px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .hero-btn:hover,
+  .hero-btn:focus {
+    background-color: #404bbf;
+  }
+}
+
+@media screen and (min-resolution: 2dppx) and (min-width: 1158px) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url("../images/hero-norm2x.jpg");
+  }
+}
+
+/*features*/
+
+.features-container {
+  padding-top: 96px;
+  padding-bottom: 96px;
+}
+
+.features-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 72px;
+}
+
+.features-list-icon {
+  display: none;
+}
+
+.features-list-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: #2e2f42;
+  margin-bottom: 8px;
+}
+
+.features-list-text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #434455;
+  justify-content: flex-start;
+}
+
+@media screen and (min-width: 768px) {
+  .features-list {
+    gap: 72px 24px;
+  }
+
+  .features-list-item {
+    width: calc((100% - 24px) / 2);
+  }
+
+  .features-list-title {
+    text-align: start;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .features-container {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+
+  .features-list-background {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 264px;
+    height: 112px;
+    border: 1px solid #8e8f99;
+    border-radius: 4px;
+    background: #f4f4fd;
+    margin-bottom: 8px;
+  }
+
+  .features-list-icon {
+    display: block;
+  }
+
+  .features-list {
+    gap: 24px;
+  }
+  .features-list-item {
+    width: calc((100% - 72px) / 4);
+  }
+  .features-list-title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+  }
+  .features-list-text {
+    font-weight: 400;
+  }
+}

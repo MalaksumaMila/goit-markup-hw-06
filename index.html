@@ -60,7 +60,7 @@
           </svg>
         </button>
       </div>
-      <div class="header-modal is-open" data-menu>
+      <div class="header-modal" data-menu>
         <div class="container header-modal-container">
           <button type="button" class="header-modal-close-btn" data-menu-close>
             <svg class="header-modal-close-svg" width="8" height="8">
@@ -154,11 +154,13 @@
       <section class="hero">
         <div class="container hero-container">
           <h1 class="hero-title">Effective Solutions for Your Business</h1>
-          <button class="hero-btn" type="button">Order Service</button>
+          <button class="hero-btn" type="button" data-modal-open>
+            Order Service
+          </button>
         </div>
       </section>
       <section class="features">
-        <div class="container">
+        <div class="container features-container">
           <h2 class="features-title visually-hidden">Features</h2>
           <ul class="features-list">
             <li class="features-list-item">
@@ -678,9 +680,9 @@ UI Designer"
         </div>
       </div>
     </footer> -->
-    <!-- <div class="backdrop">
+    <!-- <div class="backdrop" data-modal>
       <div class="modal-window">
-        <button type="button" class="modal-window-close-btn">
+        <button type="button" class="modal-window-close-btn" data-modal-close>
           <svg class="modal-window-close-svg" width="8" height="8">
             <use href="./images/icons.svg#icon-close"></use>
           </svg>
@@ -768,5 +770,6 @@ UI Designer"
     </div> -->
 
     <script src="./js/menu.js"></script>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
