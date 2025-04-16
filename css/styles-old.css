@@ -1060,9 +1060,7 @@
     background-color: #31d0aa;
   }
 
-  .container-footer-form-mail {
-  }
-
+ 
   .footer-mail-form-text {
     margin-bottom: 16px;
     font-weight: 500;
@@ -1077,9 +1075,6 @@
     align-items: center;
     justify-content: space-between;
     gap: 24px;
-  }
-
-  .footer-mail-form-label {
   }
 
   .footer-mail-form-input {
@@ -1104,9 +1099,7 @@
     color: #fff;
   }
 
-  .footer-form-icon-wrap {
-  }
-
+ 
   .footer-form-btn {
     border-radius: 4px;
     padding: 8px 24px;
