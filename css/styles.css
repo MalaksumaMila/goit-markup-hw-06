@@ -326,7 +326,7 @@ button {
   margin-bottom: 40px;
 }
 
-.header-modal-contacts-list {
+.header-modal-contacts-list:not(:last-child) {
   margin-bottom: 24px;
 }
 
@@ -375,6 +375,7 @@ button {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
+  padding: 72px 0;
 }
 
 @media screen and (min-resolution: 2dppx) {
@@ -391,7 +392,6 @@ button {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
 
@@ -402,10 +402,10 @@ button {
   letter-spacing: 0.02em;
   text-align: center;
   color: #fff;
-  max-height: 160px;
+  width: 216px;
   justify-content: center;
   align-items: center;
-  margin: 72px 37px;
+  margin: 0 auto 72px auto;
 }
 
 .hero-btn {
@@ -420,28 +420,23 @@ button {
   cursor: pointer;
   border-radius: 4px;
   padding: 16px 32px;
-  margin-bottom: 72px;
 }
 
 @media screen and (min-width: 768px) {
   .hero {
+    padding: 112px 0;
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
       url("../images/hero-tablet1x.jpg");
   }
+
   .hero-title {
     font-size: 56px;
     line-height: 1.07;
-    max-height: 120px;
-    max-width: 496px;
-    margin-top: 112px;
-    margin-bottom: 36px;
-  }
-
-  .hero-btn {
-    margin-bottom: 112px;
+    width: 496px;
+    margin: 0 auto 36px auto;
   }
 }
 @media screen and (min-resolution: 2dppx) and (min-width: 768px) {
@@ -461,14 +456,13 @@ button {
         rgba(46, 47, 66, 0.7)
       ),
       url("../images/hero-norm1x.jpg");
+    padding: 188px 0;
   }
 
   .hero-title {
-    margin-top: 188px;
     margin-bottom: 48px;
   }
   .hero-btn {
-    margin-bottom: 188px;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   .hero-btn:hover,
@@ -489,7 +483,7 @@ button {
 
 /*features*/
 
-.features-container {
+.features {
   padding-top: 96px;
   padding-bottom: 96px;
 }
@@ -539,7 +533,7 @@ button {
 }
 
 @media screen and (min-width: 1158px) {
-  .features-container {
+  .features {
     padding-top: 120px;
     padding-bottom: 120px;
   }
@@ -598,12 +592,8 @@ button {
 }
 
 .modal-window {
-  display: block;
   flex-wrap: wrap;
   min-width: 288px;
-  height: 100%;
-  margin-top: 8px;
-  margin-bottom: 8px;
   border-radius: 4px;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12),
     0 2px 1px 0 rgba(0, 0, 0, 0.2);
@@ -827,7 +817,7 @@ button {
 
 .team {
   background-color: #f4f4fd;
-  padding: 96px 12px;
+  padding: 96px 0;
 }
 
 .team-title {
@@ -850,10 +840,6 @@ button {
 
 .team-list-item {
   width: 264px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   background-color: #ffffff;
   border-radius: 0px 0px 4px 4px;
   box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
@@ -866,10 +852,6 @@ button {
 
 .team-list-item-title-text {
   padding: 32px 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
 }
 
 .team-list-image-title {
@@ -926,27 +908,18 @@ button {
 }
 
 @media screen and (min-width: 768px) {
-  .team {
-    padding: 96px 108px;
-  }
-
   .team-list {
     gap: 64px 24px;
-  }
-  .team-list-item {
-    width: calc((100% - 24px) / 2);
   }
 }
 
 @media screen and (min-width: 1158px) {
   .team {
-    padding: 120px auto;
+    padding: 120px 0;
   }
 
   .team-list {
-    display: flex;
     justify-content: space-between;
-    gap: 24px;
   }
 
   .team-list-item {
@@ -977,7 +950,6 @@ button {
 
 .portfolio-list {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
   gap: 48px;
 }
@@ -985,7 +957,6 @@ button {
 .portfolio-list-item {
   box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
     0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
-  background: #fff;
 }
 
 .portfolio-list-overlay-wrap {
@@ -1086,6 +1057,9 @@ button {
   justify-content: center;
   align-items: center;
 }
+.container-footer {
+  margin-bottom: 72px;
+}
 
 .footer-logo-link {
   font-family: "Raleway", sans-serif;
@@ -1110,8 +1084,6 @@ button {
   letter-spacing: 0.02em;
   color: #f4f4fd;
   max-width: 288px;
-  max-height: 72px;
-  margin-bottom: 72px;
 }
 
 .footer-title-socials {
@@ -1125,13 +1097,12 @@ button {
 }
 
 .container-footer-socials {
-  justify-content: space-between;
+  margin-bottom: 72px;
 }
 
 .footer-list-socials {
   display: flex;
   gap: 16px;
-  margin-bottom: 72px;
 }
 
 .footer-list-socials-icon {
@@ -1158,7 +1129,6 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
   gap: 16px;
 }
 
@@ -1203,9 +1173,7 @@ button {
 
 @media screen and (min-width: 768px) {
   .footer {
-    padding-left: 108px;
-    justify-content: flex-start;
-    text-align: start;
+    padding: 96px 0;
   }
 
   .footer-wrapper {
@@ -1213,7 +1181,11 @@ button {
     text-align: start;
     justify-content: flex-start;
     align-items: flex-start;
-    gap: 24px;
+    flex-wrap: wrap;
+  }
+
+  .container-footer {
+    margin-right: 24px;
   }
 
   .footer-logo-link {
@@ -1224,8 +1196,6 @@ button {
 
   .footer-text {
     max-width: 264px;
-    max-height: 72px;
-    margin-bottom: 72px;
   }
 
   .footer-list-socials {
@@ -1256,13 +1226,30 @@ button {
     align-items: start;
     justify-content: space-between;
   }
+
+  .footer-title-socials {
+    text-align: start;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1157px) {
+  .footer-wrapper {
+    width: 528px;
+  }
 }
 
 @media screen and (min-width: 1158px) {
   .footer {
-    padding: 100px auto;
-    display: flex;
-    flex-direction: row;
+    padding: 100px 0;
+  }
+
+  .footer-wrapper {
+    justify-content: space-between;
+  }
+
+  .container-footer {
+    margin-right: 0;
+    margin-bottom: 0;
   }
 
   .footer-list-socials-icon {
